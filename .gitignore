@@ -1,0 +1,16 @@
+# Vagrant
+.vagrant/
+#PyCharm
+.idea/
+# Python
+bin/
+build/
+include/
+lib/
+local/
+.pyc
+# Ansible 3rd-party roles
+roles/gradle/
+roles/java8/
+roles/ANXS.oracle-jdk/
+roles/nginx/

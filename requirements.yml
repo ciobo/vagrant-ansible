@@ -1,0 +1,11 @@
+# Install a role from the Ansible Galaxy
+- name: nginx
+  src: geerlingguy.nginx
+- name: java8
+  src: williamyeh.oracle-java
+  vars:
+    java_version: 8
+- name: gradle
+  src: MagneDavidsen.gradle
+  vars:
+    radle_version: 2.13

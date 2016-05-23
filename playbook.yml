@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: "sudo"
+#  tasks:
+#    - name: update apt cache
+#      apt: update_cache=yes
+#      apt: update_cache=yes cache_valid_time=3600
+#      always_run: yes
+#      tags: apt
+#    - include: tasks/apache.yml
+#    - include: tasks/git.yml
+#    - include: tasks/pip.yml
+  roles:
+#    - { role: nginx, sudo: yes}
+#    - { role: java8, sudo: yes}
+    - role: gradle
