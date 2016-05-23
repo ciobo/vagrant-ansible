@@ -5,7 +5,3 @@
   src: williamyeh.oracle-java
   vars:
     java_version: 8
-- name: gradle
-  src: MagneDavidsen.gradle
-  vars:
-    radle_version: 2.13

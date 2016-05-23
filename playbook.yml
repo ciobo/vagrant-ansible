@@ -13,4 +13,4 @@
   roles:
 #    - { role: nginx, sudo: yes}
 #    - { role: java8, sudo: yes}
-    - role: gradle
+    - {role: gradle, become: yes}
