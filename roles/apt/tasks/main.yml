@@ -1,0 +1,13 @@
+---
+- name: update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+  always_run: yes
+  tags: apt
+
+- name: install tomcat packages
+  apt: name={{ item }} state=present
+  with_items: "{{ tomcat_packages }}"
+
+- name: install other packages
+  apt: name={{ item }} state=present
+  with_items: "{{ other_packages }}"
