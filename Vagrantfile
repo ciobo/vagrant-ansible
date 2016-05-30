@@ -15,10 +15,12 @@ Vagrant.configure(2) do |config|
         v.cpus = 4 # 8
     end
 
-    config.vm.synced_folder "~/development/personal_projects/urjobhub", "/var/www/urjobhub", owner: "www-data", group:
-    "www-data"
+    config.vm.synced_folder "~/development/personal_projects/urjobhub/jhub_rest", "/var/www/urjobhub",
+    owner: "www-data", group: "www-data"
+    config.vm.synced_folder "~/development/personal_projects/urjobhub/jhub_ui/tomcat/webapps", "/etc/tomcat8/webapps",
+    create: true
 
-    config.vm.network "forwarded_port", guest: 80, host: 8080
+#     config.vm.network "forwarded_port", guest: 80, host: 8080
 
     config.vm.provision :ansible do |ansible|
         ansible.verbose = "v"
